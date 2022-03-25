@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentMain">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/palette"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:fillViewport="true"
+        android:elevation="@dimen/_2sdp"
+        android:background="@drawable/palette_background"
+        app:tabIndicator="@drawable/palette_background"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/background_grey"
+        app:tabIndicatorGravity="stretch"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabRippleColor="@null">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_round_draw_24" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_arrow_24" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_round_square_24"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_outline_circle_24"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_color_lens_24" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/color_palette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:elevation="@dimen/_3sdp"
+        android:visibility="gone"
+        android:background="@drawable/color_item_background"
+        app:layout_constraintTop_toBottomOf="@id/palette"
+        app:layout_constraintEnd_toEndOf="@id/palette"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/color_red"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_6sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/blackBorder"
+            android:backgroundTint="@color/red"
+            app:cornerRadius="@dimen/_5sdp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/color_green"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_6sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/blackBorder"
+            android:backgroundTint="@color/green"
+            app:cornerRadius="@dimen/_5sdp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/color_blue"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_6sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/blackBorder"
+            app:cornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/blue"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/color_black"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_6sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/blackBorder"
+            app:cornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_all"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:hapticFeedbackEnabled="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_6sdp"
+            app:backgroundTint="?attr/colorControlNormal"
+            android:background="@drawable/ic_baseline_autorenew_24"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/canvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/palette"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include layout="@layout/paint_canvas" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
