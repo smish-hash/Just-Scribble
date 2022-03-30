@@ -8,13 +8,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="background_main_grey">#F3F3F3</color>
-    <color name="background_grey">#DCDCDC</color>
+    <color name="blackToWhite">#FFFFFFFF</color>
+
+    <color name="iconTintPurpleToLightPurple">#BB86FC</color>
+
+    <color name="background_main_greyToDarkGrey">#342F39</color>
+    <color name="background_greyToDarkGrey">#47444C</color>
     <color name="transparent">#00FFFFFF</color>
 
-    <color name="red">#F41818</color>
-    <color name="green">#0C7E08</color>
-    <color name="blue">#2C4C9F</color>
+    <color name="redToPink">#FF7597</color>
+    <color name="greenToTeal">#03DAC6</color>
+    <color name="blueToYellow">#E9FF00</color>
 
     <color name="blackBorder">#000</color>
+
+    <color name="whiteToBlack">#1F1A24</color>
 </resources>

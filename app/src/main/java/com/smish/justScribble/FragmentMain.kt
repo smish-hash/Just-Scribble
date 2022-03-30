@@ -42,7 +42,7 @@ class FragmentMain : Fragment() {
 
         setListeners()
 
-        brush.color = resources.getColor(R.color.black, context?.theme)
+        brush.color = resources.getColor(R.color.blackToWhite, context?.theme)
         currentColor(brush.color)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -113,7 +113,7 @@ class FragmentMain : Fragment() {
                 .setDuration(100)
                 .setInterpolator(LinearInterpolator())
                 .withEndAction {
-                    canvas.drawColor(resources.getColor(R.color.white, requireContext().theme))
+                    canvas.drawColor(resources.getColor(R.color.whiteToBlack, requireContext().theme))
                     binding.colorPalette.visibility = View.GONE
                 }
                 .start()
@@ -135,22 +135,22 @@ class FragmentMain : Fragment() {
                     .withEndAction {
                         when (color) {
                             0 -> {
-                                brush.color = requireContext().getColor(R.color.red)
+                                brush.color = requireContext().getColor(R.color.redToPink)
                                 currentColor(brush.color)
                             }
 
                             1 -> {
-                                brush.color = requireContext().getColor(R.color.green)
+                                brush.color = requireContext().getColor(R.color.greenToTeal)
                                 currentColor(brush.color)
                             }
 
                             2 -> {
-                                brush.color = requireContext().getColor(R.color.blue)
+                                brush.color = requireContext().getColor(R.color.blueToYellow)
                                 currentColor(brush.color)
                             }
 
                             3 -> {
-                                brush.color = requireContext().getColor(R.color.black)
+                                brush.color = requireContext().getColor(R.color.blackToWhite)
                                 currentColor(brush.color)
                             }
                         }

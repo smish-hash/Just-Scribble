@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/white"
+    android:background="@color/whiteToBlack"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentMain">
 
@@ -12,15 +12,18 @@
         android:id="@+id/palette"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_16sdp"
-        android:fillViewport="true"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
         android:elevation="@dimen/_2sdp"
+        app:tabIconTint="@color/tab_icon_tint"
         android:background="@drawable/palette_background"
         app:tabIndicator="@drawable/palette_background"
         app:tabIndicatorAnimationMode="elastic"
-        app:tabIndicatorColor="@color/background_grey"
+        app:tabIndicatorColor="@color/background_greyToDarkGrey"
         app:tabIndicatorGravity="stretch"
         android:padding="@dimen/_4sdp"
+        app:tabMode="scrollable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +75,7 @@
             android:layout_margin="@dimen/_6sdp"
             app:strokeWidth="@dimen/_1sdp"
             app:strokeColor="@color/blackBorder"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/redToPink"
             app:cornerRadius="@dimen/_5sdp"/>
 
         <com.google.android.material.button.MaterialButton
@@ -82,7 +85,7 @@
             android:layout_margin="@dimen/_6sdp"
             app:strokeWidth="@dimen/_1sdp"
             app:strokeColor="@color/blackBorder"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/greenToTeal"
             app:cornerRadius="@dimen/_5sdp"/>
 
         <com.google.android.material.button.MaterialButton
@@ -93,7 +96,7 @@
             app:strokeWidth="@dimen/_1sdp"
             app:strokeColor="@color/blackBorder"
             app:cornerRadius="@dimen/_5sdp"
-            android:backgroundTint="@color/blue"/>
+            android:backgroundTint="@color/blueToYellow"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_black"
@@ -103,7 +106,7 @@
             app:strokeWidth="@dimen/_1sdp"
             app:strokeColor="@color/blackBorder"
             app:cornerRadius="@dimen/_5sdp"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="@color/blackToWhite"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/clear_all"
@@ -112,7 +115,7 @@
             android:hapticFeedbackEnabled="true"
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/_6sdp"
-            app:backgroundTint="?attr/colorControlNormal"
+            app:backgroundTint="@color/dark_grey"
             android:background="@drawable/ic_baseline_autorenew_24"/>
 
 
@@ -127,8 +130,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <include layout="@layout/paint_canvas" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/whiteToBlack"
+            app:cardCornerRadius="@dimen/_13sdp">
+            <include layout="@layout/paint_canvas" />
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 

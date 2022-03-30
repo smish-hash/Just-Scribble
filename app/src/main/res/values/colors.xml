@@ -8,13 +8,20 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="background_main_grey">#F3F3F3</color>
-    <color name="background_grey">#DCDCDC</color>
-    <color name="transparent">#00FFFFFF</color>
+    <color name="blackToWhite">#FF000000</color>
 
-    <color name="red">#F41818</color>
-    <color name="green">#0C7E08</color>
-    <color name="blue">#2C4C9F</color>
+    <color name="iconTintPurpleToLightPurple">#FF6200EE</color>
+
+    <color name="background_main_greyToDarkGrey">#F3F3F3</color>
+    <color name="background_greyToDarkGrey">#DCDCDC</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="dark_grey">#7A7A7A</color>
+
+    <color name="redToPink">#F41818</color>
+    <color name="greenToTeal">#0C7E08</color>
+    <color name="blueToYellow">#2C4C9F</color>
 
     <color name="blackBorder">#000</color>
+
+    <color name="whiteToBlack">#FFFFFFFF</color>
 </resources>
