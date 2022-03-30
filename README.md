@@ -20,3 +20,5 @@ Functionality:
 - Circle : To draw full circles of any size
 - Color Palette : To let the user choose a different color if needed
 - Clear button : To clear the canvas and start again
+
+This application is available on the Google Play Store: <a href="https://bit.ly/smish-JustScribble" target="blank">Just Scribble</a>.
