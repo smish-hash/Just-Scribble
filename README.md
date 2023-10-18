@@ -15,7 +15,7 @@ The application uses Modern Android Development at its core to work efficiently.
 
 Functionality:
 - Pencil : Draw smooth lines/curves
-- Arrow : To draw arrows
+- Arrow : To draw arrows on top
 - Rectangle : To draw rectangles/squares as required
 - Circle : To draw full circles of any size
 - Color Palette : To let the user choose a different color if needed
